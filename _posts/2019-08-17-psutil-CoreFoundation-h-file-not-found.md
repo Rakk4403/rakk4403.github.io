@@ -6,7 +6,7 @@ date:   2019-08-17
 tags: python
 ---
 
-# psutil 설치 실패: CoreFoundation.h file not found
+## psutil 설치 실패: CoreFoundation.h file not found
 
 `pip install psutil`이 실패했다.
 ```
@@ -34,7 +34,7 @@ $ xcode-select --reset
 ```
 cd /usr/local/include
 ln -s /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Versions/A/Headers ./CoreFoundation
-# 위에서 기록하지 않았지만, <IOKit/LibIOKit.h>에 대한 문제도 발생했었으므로, 같이 처리한다.
+## 위에서 기록하지 않았지만, <IOKit/LibIOKit.h>에 대한 문제도 발생했었으므로, 같이 처리한다.
 ln -s /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/IOKit.framework/Versions/A/Headers ./IOKit
 ```
 이후, `pip install psutil`을 수행하자, 성공했다!
